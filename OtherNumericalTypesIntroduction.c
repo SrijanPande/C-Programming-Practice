@@ -1,6 +1,19 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+//Void
+/*
+Void is a unique type.
+By itself, the void keyword means "Cannot Hold Any Value"
+A function may have a void return type indicating it does not return any value
+A function may have a void parameter indicating it does not take any arguements
+However, the derived type (void *) indicates that the pointer can reference any value
+*/
+void PrintHelloWorld(void){
+    puts("Hello, World");
+    return;
+}
+
 int main(int argc, char *argv[]){
     //Enumerators
     enum Day {Monday = 1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
@@ -20,5 +33,7 @@ int main(int argc, char *argv[]){
     printf("%d means\n",South);
     printf("%d means\n",West);
 
+    puts("");
+    PrintHelloWorld();
     return EXIT_SUCCESS;
 }
