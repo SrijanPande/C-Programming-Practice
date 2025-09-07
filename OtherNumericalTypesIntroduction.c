@@ -6,7 +6,7 @@
 Void is a unique type.
 By itself, the void keyword means "Cannot Hold Any Value"
 A function may have a void return type indicating it does not return any value
-A function may have a void parameter indicating it does not take any arguements
+A function may have a void parameter indicating it does not take any arguments
 However, the derived type (void *) indicates that the pointer can reference any value
 */
 void PrintHelloWorld(void){
@@ -14,7 +14,15 @@ void PrintHelloWorld(void){
     return;
 }
 
+//A function whose paramters list is empty accepts any number of arguments (contrasted with a parameter list containing only void which indicates a function does not accept any parameters)
+void PrintByeWorld(){
+    puts("Bye, World");
+    return;
+}
+
 int main(int argc, char *argv[]){
+    PrintHelloWorld();
+
     //Enumerators
     enum Day {Monday = 1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
     enum CardinalDirections {North = 0, East = 90, South = 180, West = 270};
@@ -34,6 +42,6 @@ int main(int argc, char *argv[]){
     printf("%d means\n",West);
 
     puts("");
-    PrintHelloWorld();
+    PrintByeWorld(13,"Bye World",4);
     return EXIT_SUCCESS;
 }
