@@ -1,0 +1,27 @@
+Implementations is the term used by the C standard to refer to compilers and is defined as follows : 
+"A particular set of software, running in a particular translation environment under particular control options, that performs translation of programs for, and supports execution of functions in, a particular execution environment."
+
+The above definition indicates that each compiler with a particular set of command line flags, along with the C Standard Library, is considered a seperate implementation.
+
+Portability is simply the ability of code written on machine to be transferred succesfully onto another machine
+
+Every C compiler implementation is at least a little different. Programs written for C can be considered strictly conforming if they use only those features of the language and library specified in the C Standard. These programs are intended to be maximally portable.
+
+However, due to the range of implementation behaviors, no real-world C program is strictly conforming.
+Instead the C Standard allows you to write conforming programs that may depend on non-portable language and/or library feaatures.
+
+The 5 Portability issues enumerated in the C Standard are as follows : 
+
+1. IMPLEMENTATION DEFINED BEHAVIOR 
+Program behavior that is unspecified by the C Standard and may offer different results among different implementations, but has consistent, documented behavior within the implementation.
+Example : Number of Bits in a Byte
+
+2. UNSPECIFIED BEHAVIOR
+Program behavior for which the C Standard provides multiple options imposing no restrictions on which option is chosen in any instance. Each execution of a given expression may yield a different result than a previous execution of the same expression.
+Example : Function Parameter Storage Layout
+
+3. UNDEFINED BEHAVIOR
+Prpgram behavior, upon use of a nonportable or erroneous programn construct or of erroneous data, for which the standard imposes no requirements.
+Compilers have the latitutde to either ignore undefined behavior entirely (yielding unpredictable results), behave in a documented manner characteristic of the environment (with or without issuing a diagnostic) or terminate the translation or execution (without issuing a diagnostic).
+
+4. Locale-Specific Behavior and Common Extensions
